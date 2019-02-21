@@ -8,7 +8,10 @@ import java.util.concurrent.TimeUnit;
 public class BlockingQueueDEmo {
     public static void main(String[] args) throws InterruptedException {
 
-        BlockingQueue<Object> queue = new ArrayBlockingQueue<Object>(3);
+        // BlockingQueue<Object> queue = new LinkedBlockingQueue<>(3);//默认队列数量是最大值
+       BlockingQueue<Object> queue = new ArrayBlockingQueue<Object>(3);
+        //BlockingQueue<Object> queue = new SynchronousQueue<Object>();
+        
   /*     第一种抛异常
        queue.add("a");
         queue.add("b");
